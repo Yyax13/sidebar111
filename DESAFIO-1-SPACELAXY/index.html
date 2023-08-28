@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SpaartNet</title>
+  <style>
+    body {
+      background-image: url('assets/image.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    aside {
+      display: none;
+      backdrop-filter: blur(3px);
+      background-color: rgba(57, 78, 83, 0.349);
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 150px;
+      color: #ffffff;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 11px 95px;
+      box-shadow: 9px 9px 9px #1d1d1d;
+      transition: width 0.3s; /* Adicione a transição */
+    }
+
+    .abig {
+      font-weight: bold;
+      font-size: large;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      cursor: default;
+    }
+
+    .sidebar-header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar-nav li {
+      margin-bottom: 8px;
+      text-decoration: none;
+    }
+
+    .sidebar-nav li a {
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .sidebar-nav li a:hover {
+      color: black;
+    }
+
+    /* Botão customizado */
+    .toggle-button {
+      backdrop-filter: blur(1px);
+      background-color: rgba(57, 78, 83, 0.349);
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 50%; /* Formato de círculo */
+      cursor: pointer;
+      z-index: 1; /* Coloque acima do aside */
+    }
+
+    /* Alteração do ícone ao ser pressionado */
+    .toggle-button.active .bar {
+      transform: rotate(180deg);
+      background-color: #ffffff;
+    }
+
+    .toggle-button.active .bar:first-child {
+      transform: rotate(-360deg);
+    }
+
+    .bar {
+      display: block;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      margin: 4px auto;
+      transition: transform 0.3s, background-color 0.3s; /* Adicione a transição */
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-button" onclick="toggleAside()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <br>
+      <br>
+    </div>
+    <ul class="sidebar-nav">
+      <li>
+        <h href="#" class="abig">Item 1</h>
+        <ul>
+          <li><a href="#">Subitem 1</a></li>
+          <li><a href="#">Subitem 2</a></li>
+          <li><a href="#">Subitem 3</a></li>
+        </ul>
+      </li>
+      <li>
+        <h href="#" class="abig">Item 2</h>
+        <ul>
+          <li><a href="#">Subitem 1</a></li>
+          <li><a href="#">Subitem 2</a></li>
+          <li><a href="#">Subitem 3</a></li>
+        </ul>
+      </li>
+      <li>
+        <h href="#" class="abig">Item 3</h>
+        <ul>
+          <li><a href="#">Subitem 1</a></li>
+          <li><a href="#">Subitem 2</a></li>
+          <li><a href="#">Subitem 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside> 
+  
+  <script>
+    var aside = document.getElementById("sidebar");
+    var button = document.querySelector(".toggle-button");
+
+    function toggleAside() {
+      aside.style.display = (aside.style.display === "none") ? "block" : "none";
+      button.classList.toggle("active"); // Adicione ou remova a classe "active"
+    }
+  </script>
+</body>
+</html>
