@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Serviço Secreto</title>
+    <!-- Inclua o Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Inclua o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Adicione seu estilo CSS personalizado -->
+    <style>
+        /* Estilo para a barra lateral */
+        .sidebar {
+            width: 250px;
+            background-color: #1a1a1a; /* Fundo escuro */
+            color: #fff;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 4px;
+        }
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .sidebar a:hover {
+            color: #ff6b6b; /* Cor de realce */
+        }
+        .yyax a:hover {
+            color: darkblue;
+        }
+        /* Estilo para a área de conteúdo */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        /* Estilo para gráficos */
+        .chart-container {
+            background-color: #333; /* Fundo escuro */
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Barra lateral -->
+    <div class="sidebar">
+        <h1 class="text-4xl font-semibold text-start p-2">Main</h1>
+        <ul>
+            <li class="text-sm"><a href="#" class="block p-2 text-xl hover:bg-gray-600">Página Inicial</a></li>
+            <li class="text-sm"><a href="https://discord.gg/ymkaznSE86" class="block p-2 text-xl hover:bg-gray-600">Spacelaxy</a></li>
+            <li class="text-sm"><a href="https://github.com/Yyax13" class="block p-2 text-xl hover:bg-gray-600">Github</a></li>
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <br class="text-11xl">
+            <div class="yyax">
+                <br class="text-11xl"><li class="text-sm"><a href="#" class="block p-2 cursor-pointer text-xl hover:bg-gray-600">Made by Solo Yyax</a></li>
+            </div>
+            <li class="text-sm pb-2"><a href="../index.html" class="block p-2 text-bold text-3xl hover:bg-gray-600 hover:text-purple-500">Sair</a></li>
+        </ul>
+    </div>
+
+    <!-- Área de conteúdo -->
+    <div class="content">
+        <h1 class="text-2xl font-semibold mb-4">Bem-vindo ao Dashboard de Serviço Secreto</h1>
+        <div class="chart-container">
+            <h2 class="text-xl font-semibold mb-2">Terroristas mortos</h2>
+            <canvas id="monthlyChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2 class="text-xl font-semibold mb-2">Russos destroçados</h2>
+            <canvas id="dailyChart"></canvas>
+        </div>
+        <footer class="bg-dark text-white p-4 mt-8">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2023 Solo Yyax </p>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- JavaScript para criar gráficos fictícios usando Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Dados fictícios para gráficos
+        const monthlyData = [120000, 203200, 142800, 287100, 24090, 323100];
+        const dailyData = [33550, 75460, 49755, 52485, 8070, 31265, 7315];
+
+        // Configuração dos gráficos
+        const chartOptions = {
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                    },
+                    ticks: {
+                        color: '#fff', // Cor do texto no eixo X
+                    },
+                },
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 500,
+                        color: '#fff', // Cor do texto no eixo Y
+                    },
+                },
+            },
+        };
+
+        const monthlyChartConfig = {
+            type: 'bar',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+                datasets: [{
+                    label: 'Terroristas mortos',
+                    data: monthlyData,
+                    backgroundColor: '#ff6b6b', // Vermelho escuro
+                }]
+            },
+            options: chartOptions,
+        };
+
+        const dailyChartConfig = {
+            type: 'line',
+            data: {
+                labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+                datasets: [{
+                    label: 'Russos destroçados',
+                    data: dailyData,
+                    borderColor: '#8b5cf6', // Roxo escuro
+                    fill: false,
+                }]
+            },
+            options: chartOptions,
+        };
+
+        // Crie os gráficos
+        const monthlyChartCtx = document.getElementById('monthlyChart').getContext('2d');
+        const dailyChartCtx = document.getElementById('dailyChart').getContext('2d');
+
+        new Chart(monthlyChartCtx, monthlyChartConfig);
+        new Chart(dailyChartCtx, dailyChartConfig);
+    </script>
+</body>
+</html>

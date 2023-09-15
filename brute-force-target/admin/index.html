@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login - Serviço Secreto</title>
+    <!-- Inclua o Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Adicione seu estilo CSS personalizado -->
+    <style>
+        /* Estilos para o alerta */
+        .custom-alert {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            color: #fff; /* Cor do texto branco */
+        }
+        .alert-success {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 flex justify-center items-center h-screen"> <!-- Fundo cinza escuro -->
+    <div class="bg-gray-900 p-8 rounded-lg shadow-lg w-96"> <!-- Fundo cinza mais escuro -->
+        <h1 class="text-3xl font-semibold text-center text-red-500 mb-6">Login - Serviço Secreto</h1> <!-- Texto vermelho -->
+        <form id="login-form">
+            <div class="mb-4">
+                <label for="username" class="block text-white">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" class="w-full px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:border-red-500" required> <!-- Cores ajustadas -->
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-white">Senha:</label>
+                <input type="password" id="password" name="password" class="w-full px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:border-red-500" required> <!-- Cores ajustadas -->
+            </div>
+            <button type="button" id="login-button" class="w-full bg-red-500 text-white p-3 rounded-lg font-semibold hover:bg-red-600 transition duration-300">Entrar</button>
+        </form>
+    </div>
+
+    <!-- Alerta personalizado para sucesso -->
+    <div id="success-alert" class="custom-alert alert-success">
+        Login bem-sucedido! Redirecionando para o painel...
+    </div>
+
+    <!-- Alerta personalizado para erro -->
+    <div id="error-alert" class="custom-alert">
+        Credenciais inválidas. Tente novamente.
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
