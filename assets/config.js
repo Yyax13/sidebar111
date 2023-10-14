@@ -1,5 +1,5 @@
 const config = {
-    urlBase: `${location.origin}/yyax`
+    urlBase: `${location.origin}`
 }
 
 export default config
