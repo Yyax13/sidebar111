@@ -18,6 +18,10 @@
 
 /* Animations End */
 
+#hkolds_v {
+    color: var(--cor-texto);
+}
+
 *{
     margin: 0;
     padding: 0;
