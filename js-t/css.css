@@ -1,10 +1,33 @@
 :root {
     --BackGround: rgb(21, 21, 21);
     --TextColor: rgb(244, 234, 244);
-    --InputsBackground: rgb(27,27,27);
+    --InputsBackground: rgb(31,31,31);
 }
 
 body {
     background-color: var(--BackGround);
     color: var(--TextColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input[type="text"] {
+    padding: 7px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--InputsBackground);
+    color: var(--TextColor);
+    font-weight: 500;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    background-color: var(--InputsBackground);
+    color: var(--TextColor);
+    font-weight: 500;
 }
