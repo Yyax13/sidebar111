@@ -21,7 +21,7 @@ input[type="text"] {
     background-color: var(--InputsBackground);
     color: var(--TextColor);
     font-weight: 500;
-    outline: none;
+    outline: 2px solid transparent;
 }
 
 button {
