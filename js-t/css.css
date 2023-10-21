@@ -30,4 +30,15 @@ button {
     background-color: var(--InputsBackground);
     color: var(--TextColor);
     font-weight: 500;
+    cursor: pointer;
+}
+button:hover {
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    background-color: rgb(74, 67, 84);
+    color: var(--TextColor);
+    font-weight: 500;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
 }
