@@ -1,0 +1,10 @@
+:root {
+    --BackGround: rgb(21, 21, 21);
+    --TextColor: rgb(244, 234, 244);
+    --InputsBackground: rgb(27,27,27);
+}
+
+body {
+    background-color: var(--BackGround);
+    color: var(--TextColor);
+}
