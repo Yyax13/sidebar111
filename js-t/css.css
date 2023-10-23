@@ -43,3 +43,8 @@ button:hover {
     cursor: pointer;
     transition: ease-in-out 0.2s;
 }
+
+.embaixo {
+    margin-top: 460px;
+    align-items: start;
+}
