@@ -5,12 +5,12 @@
 }
 
 body {
-    background-color: var(--BackGround);
-    color: var(--TextColor);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--BackGround);
+    color: var(--TextColor);
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -45,6 +45,35 @@ button:hover {
 }
 
 .embaixo {
-    margin-top: 460px;
+    margin-top: 431px;
+    margin-bottom: 0px;
     align-items: start;
+}
+
+header {
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+header button {
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    background-color: var(--InputsBackground);
+    color: var(--TextColor);
+    font-weight: 500;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+header button:hover {
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    background-color: rgb(74, 67, 84);
+    color: var(--TextColor);
+    font-weight: 500;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    font-weight: bold;
 }

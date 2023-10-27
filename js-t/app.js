@@ -3,3 +3,8 @@ function Hack() {
     document.getElementById("hackme").innerHTML = textToChange
     document.getElementById("Text").value = "";
 }
+
+function change_back() {
+    let text = prompt("em desenvolvimento")
+    alert(text)
+}
