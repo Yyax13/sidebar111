@@ -1,77 +1,20 @@
-:dark {
+:root {
     --BackGround: rgb(21, 21, 21);
     --TextColor: rgb(244, 234, 244);
     --InputsBackground: rgb(31,31,31);
 }
 
-:light {
-    --LIGHTBackGround: rgb(235, 235, 235);
-    --LIGHTTextColor: rgb(7, 4, 7);
-    --LIGHTInputsBackground: rgb(92, 92, 92);
-}
-
-.light_body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--LIGHTBackGround);
-    color: var(--LIGHTTextColor);
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.light_input_text {
-    padding: 7px;
-    border: none;
-    border-radius: 7px;
-    background-color: var(--LIGHTInputsBackground);
-    color: var(--LIGHTTextColor);
-    font-weight: 500;
-    outline: 2px solid transparent;
-}
-
-.light_button {
-    border: none;
-    border-radius: 7px;
-    padding: 7px;
-    background-color: var(--LIGHTInputsBackground);
-    color: var(--LIGHTTextColor);
-    font-weight: 500;
-    cursor: pointer;
-}
-.light_button:hover {
-    border: none;
-    border-radius: 7px;
-    padding: 7px;
-    background-color: rgb(74, 67, 84);
-    color: var(--LIGHTTextColor);
-    font-weight: 500;
-    cursor: pointer;
-    transition: ease-in-out 0.2s;
-}
-
-.light_embaixo {
-    margin-top: 15px;
-    margin-bottom: 0px;
-    align-items: start;
-}
-
-.light_header {
-    align-self: flex-end;
-    margin-top: auto;
-}
-
-.dark_body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body {
     background-color: var(--BackGround);
     color: var(--TextColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.dark_input_text {
+input[type="text"] {
     padding: 7px;
     border: none;
     border-radius: 7px;
@@ -81,7 +24,7 @@
     outline: 2px solid transparent;
 }
 
-.dark_button {
+button {
     border: none;
     border-radius: 7px;
     padding: 7px;
@@ -90,7 +33,7 @@
     font-weight: 500;
     cursor: pointer;
 }
-.dark_button:hover {
+button:hover {
     border: none;
     border-radius: 7px;
     padding: 7px;
@@ -101,13 +44,7 @@
     transition: ease-in-out 0.2s;
 }
 
-.dark_embaixo {
-    margin-top: 15px;
-    margin-bottom: 0px;
+.embaixo {
+    margin-top: 460px;
     align-items: start;
-}
-
-.dark_header {
-    align-self: flex-end;
-    margin-top: auto;
 }
