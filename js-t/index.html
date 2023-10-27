@@ -6,16 +6,17 @@
     <title>TryHackMe</title>
     <link rel="stylesheet" href="css.css">
 </head>
-<body>
-    <header>
-        <button onclick="change_back()">abc</button>
+<body class="dark_body" id="corpo">
+    <header class="dark_header">
+        <button class="dark_button" name="theme" id="button" onclick="change_back()">abc</button>
     </header>
     <h1 id="hackme">Hack Me</h1>
     <form>
-        <input type="text" id="Text" required placeholder="Texto para inserir">
-        <button type="button" onclick="Hack()">Hackear</button>
+        <input class="dark_input_text" type="text" id="Text" required placeholder="Texto para inserir">
+        <button class="dark_button" id="button" type="button" onclick="Hack()">Hackear</button>
     </form>
-    <p class="embaixo">Se você está em soloyyax.com ou soloyax.com, acesse <a href="https://yyax13.github.io/js-t">essa pagina</a> para usar está funcionalidade</p>
+    <p class="dark_embaixo" id="footer">Nem adianta tentar dar Enter, só funciona se clicar no botão</p>
+    <p class="dark_embaixo" id="footer">Se você está em soloyyax.com ou soloyax.com, acesse <a href="https://yyax13.github.io/js-t">essa pagina</a> para usar está funcionalidade</p>
     <script src="app.js"></script>
 </body>
 </html>
